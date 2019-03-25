@@ -126,6 +126,7 @@ def export(parser, args):
             sflags = ' '.join(str(f) for f in sorted(sflags))
             bflags = ''.join(str(f) for f in sorted(bflags))
             key = ' '.join([e for e in (key, sflags, bflags) if len(e) > 0])
+            key = str(key)
 
             if isinstance(spec.package, PythonPackage):
                 py = spec['python']
