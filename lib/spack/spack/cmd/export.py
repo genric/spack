@@ -157,7 +157,7 @@ def export(parser, args):
                 mod = cls(spec) if cls else None
                 if mod and not mod.conf.blacklisted:
                     if os.path.exists(mod.layout.filename):
-                        modules[key] = mod.layout.use_name
+                        modules[key] = str(mod.layout.use_name)
                     else:
                         msg = "module not present for {0}"
                         msg = msg.format(spec.format("$_$@"))
